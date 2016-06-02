@@ -85,3 +85,46 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :imageoptim do |options|
+  # Use a build manifest to prevent re-compressing images between builds
+  options.manifest = true
+
+  # Silence problematic image_optim workers
+  options.skip_missing_workers = true
+
+  # Cause image_optim to be in shouty-mode
+  options.verbose = false
+
+  # Setting these to true or nil will let options determine them (recommended)
+  options.nice = true
+  options.threads = true
+
+  # Image extensions to attempt to compress
+  options.image_extensions = %w(.png .jpg .gif .svg)
+
+  # Compressor worker options, individual optimisers can be disabled by passing
+  # false instead of a hash
+  options.advpng    = { :level => 4 }
+  options.gifsicle  = { :interlace => false }
+  options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
+  options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+  options.optipng   = { :level => 6, :interlace => false }
+  options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
+  options.pngout    = { :copy_chunks => false, :strategy => 0 }
+  options.svgo      = {}
+end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+  # deploy.deploy_method = :rsync
+  # deploy.host          = 'www.example.com'
+  # deploy.path          = '/srv/www/site'
+  # Optional Settings
+  # deploy.user  = 'tvaughan' # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
+end
