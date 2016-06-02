@@ -15,6 +15,11 @@
   padding-top: 3.5em;
   text-align: center;
   .social {
+    a {
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+    }
     .fa {
       font-size: 2em;
       padding: 0.25em;
@@ -32,5 +37,9 @@
     color: darken($accent-color, 25%);
     text-align: left;
     margin-top: 3.5em;
+    .fa-heart {
+      color: #D8569B;
+      font-size: 0.85em;
+    }
   }
 }
