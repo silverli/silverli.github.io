@@ -117,7 +117,7 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.branch = 'gh-pages'
+  deploy.branch = 'master'
   deploy.build_before = true
   # deploy.deploy_method = :rsync
   # deploy.host          = 'www.example.com'
