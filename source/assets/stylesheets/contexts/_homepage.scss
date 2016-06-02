@@ -3,6 +3,21 @@
   margin: 4em auto;
   max-width: 50em;
   padding: 1.1em;
+  @include pie-clearfix;
+  img {
+    display: block;
+    margin: 0em auto 1.5em auto;
+    max-width: 300px;
+    @include breakpoint($bp-m) {
+      @include column(4);
+    }
+  }
+  .information {
+    @include breakpoint($bp-m) {
+      @include column(8);
+      @include last;
+    }
+  }
 }
 
 .page-title {
