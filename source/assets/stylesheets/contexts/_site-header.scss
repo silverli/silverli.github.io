@@ -14,6 +14,20 @@
   }
 
   .mobile-navigation {
-    float: right;
+    button {
+      margin-top: 0.25em;
+      float: right;
+      border: 0px none;
+      width: auto;
+      color: $background-color;
+      font-family: 'Ubuntu', "helvetica neue", helvetica, sans-serif;
+      text-transform: uppercase;
+    }
+    .menu-trigger {
+      display: inline-block;
+    }
+    span i {
+      display: inline-block;
+    }
   }
 }

@@ -49,9 +49,13 @@
   @include pie-clearfix;
   display: block;
   margin: 0 auto;
+  padding: 0em 2em;
+  @include breakpoint($bp-s) {
+    padding: 0em;
+  }
   .skill-item {
     display: block;
-    margin-top: 1em;
+    margin-top: 1.2em;
     @include breakpoint($bp-s) {
       @include column(4);
       @include last-col3;
