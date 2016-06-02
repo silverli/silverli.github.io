@@ -1,0 +1,71 @@
+.image-grid {
+  text-align: center;
+  @include pie-clearfix;
+  .image-item {
+    padding: 0.5em;
+    margin: 0.6em;
+    transition: transform 0.3s ease-in;
+    @include breakpoint($bp-s) {
+      @include column(6);
+      @include last-col2;
+    }
+    @include breakpoint($bp-l) {
+      @include column(4);
+      @include last-col3;
+    }
+    &:hover, &:focus {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+    a {
+      transform: color 0.3s ease-in;
+      &:hover, &:focus {
+        color: darken($accent-color, 18%);
+        text-decoration: none;
+      }
+    }
+    .caption {
+      margin-top: 1em;
+      font-family: 'Ubuntu', "helvetica neue", helvetica, sans-serif;
+      text-transform: uppercase;
+      text-decoration: none;
+      transform: color 0.3s ease-in;
+      &:hover, &:focus {
+        color: darken($accent-color, 18%);
+        text-decoration: none;
+      }
+    }
+  }
+  img {
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding: 0.25em;
+  }
+}
+
+.skills-grid {
+  @include pie-clearfix;
+  display: block;
+  margin: 0 auto;
+  .skill-item {
+    display: block;
+    margin-top: 1em;
+    @include breakpoint($bp-s) {
+      @include column(4);
+      @include last-col3;
+    }
+    @include breakpoint($bp-l) {
+      @include column(2.4);
+      @include last-col5;
+    }
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+    ul li {
+      list-style-type: disc;
+    }
+  }
+}

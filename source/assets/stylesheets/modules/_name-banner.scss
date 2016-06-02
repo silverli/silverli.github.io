@@ -1,0 +1,59 @@
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.name-banner {
+  display: block;
+  padding-top: 8em;
+  padding-bottom: 4em;
+  background-color: $accent-color;
+  position: relative;
+  z-index: 1;
+  &:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(2deg);
+    transform-origin: 0 0;
+    z-index: -1;
+  }
+}
+
+#lindsay {
+  display: block;
+  width:98%;
+  height: auto;
+  max-width: 900px;
+  fill: none;
+  margin: 0 auto;
+  path {
+    stroke: white;
+    stroke-width: 3;
+  }
+  #l-letter, #indsay, #silver {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  #l-letter {
+    animation: dash 3s linear 0.1s forwards;
+  }
+
+  #indsay {
+    animation: dash 3s linear 1.6s forwards;
+  }
+
+  #silver {
+    animation: dash 2s linear 3.9s forwards;
+  }
+}

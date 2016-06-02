@@ -1,0 +1,61 @@
+.work {
+  .image-container {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2em;
+    &:before {
+      content: '';
+      display: block;
+      padding: 26%;
+      .quakers & {
+        padding: 21%;
+      }
+    }
+    .phone {
+      position: absolute;
+      right: 28%;
+      bottom: 0;
+      width:20%;
+      z-index: 300;
+    }
+    .browser {
+      position: absolute;
+      left: 10px;
+      width: 70%;
+      bottom:0;
+      .quakers & {
+        left: 30px;
+      }
+    }
+    .tablet {
+      width:30%;
+      position: absolute;
+      right: 15px;
+      bottom: 0;
+      .quakers & {
+        width:24%;
+        right: 75px;
+      }
+    }
+  }
+  .project-header {
+    h3 {
+      color: darken($accent-color, 30%);
+    }
+    margin-bottom: 1.1em;
+    @include breakpoint($bp-l) {
+      @include column(8);
+    }
+  }
+  .other-details {
+    h4 {
+      text-transform: uppercase;
+      color: darken($accent-color, 30%);
+    }
+    @include breakpoint($bp-l) {
+      @include column(4);
+      @include last;
+    }
+  }
+}
