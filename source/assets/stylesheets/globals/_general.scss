@@ -109,6 +109,11 @@ a {
   @include link;
 }
 
+a.regular {
+  @include link;
+  text-decoration: underline;
+}
+
 strong, b {
   font-weight: bold;
 }

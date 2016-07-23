@@ -13,6 +13,7 @@ gem 'middleman-deploy', '~> 1.0'
 gem 'image_optim'
 gem 'image_optim_pack'
 gem 'middleman-imageoptim'
+gem 'activesupport', '>= 4.1.10'
 
 # For faster file watcher updates on Windows:
 # gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]

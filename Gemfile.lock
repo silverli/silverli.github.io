@@ -159,6 +159,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (>= 4.1.10)
   haml
   image_optim
   image_optim_pack
@@ -170,5 +171,8 @@ DEPENDENCIES
   middleman-patterns (~> 0.2)
   puma
 
+RUBY VERSION
+   ruby 2.0.0p648
+
 BUNDLED WITH
-   1.11.2
+   1.12.5
