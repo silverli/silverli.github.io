@@ -41,7 +41,7 @@
   }
   .project-header {
     h3 {
-      color: darken($accent-color, 30%);
+      color: darken($accent-color, 15%);
     }
     margin-bottom: 1.1em;
     @include breakpoint($bp-l) {
@@ -51,7 +51,7 @@
   .other-details {
     h4 {
       text-transform: uppercase;
-      color: darken($accent-color, 30%);
+      color: darken($accent-color, 15%);
     }
     @include breakpoint($bp-l) {
       @include column(4);

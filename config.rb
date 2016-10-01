@@ -115,6 +115,7 @@ activate :imageoptim do |options|
   options.svgo      = {}
 end
 
+# all changes made in source branch, deployed to master
 activate :deploy do |deploy|
   deploy.method = :git
   deploy.branch = 'master'
